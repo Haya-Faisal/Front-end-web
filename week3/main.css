@@ -1,0 +1,138 @@
+.heading {
+  background-color: #408180;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(./assets/bgimage.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  filter: blur(5px);
+  z-index: -1;
+}
+
+.menu {
+  display: block;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  /* margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px; */
+}
+
+li{
+    list-style: none;
+    display: block;
+    margin-right: 10px;
+}
+
+.header {
+  background-color: rgba(59, 128, 112, 0.8);
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  color: white;
+}
+
+.header .menu-icon {
+  font-size: 42px;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.header .logo {
+  font-size: 44px;
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+.header .search-box {
+  background: white;
+  border-radius: 20px;
+  padding: 5px 10px;
+}
+
+.header .search-box input {
+  border: none;
+  outline: none;
+  padding: 5px;
+  font-size: 14px;
+}
+
+.header .search-box i {
+  color: #888;
+}
+
+.header .right-section {
+  display: inline-block;
+  margin-left: auto;
+  display: flex;
+  gap:20px;
+  font-size: 24px;
+}
+
+.components {
+    margin: 50px;
+  }
+
+.menu3 {
+  background-color: #f4a940;
+  padding: 20px;
+  border-radius: 15px;
+  width: 400px;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 40px;
+  margin-left: 100px;
+  margin-top: 50px;
+  gap: 20px;
+  }
+
+  .components .comm, .housing, .jobs, .ForSale, .DiscussionForum, .Gigs, .Resume {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 20px;
+    background-color: #ffdc99;
+    font-size: 24px;
+    text-align: left;
+    cursor: pointer;
+  }
+
+.components .comm:hover, .housing:hover, .jobs:hover, .ForSale:hover, .DiscussionForum:hover, .Gigs:hover, .Resume:hover {
+  background-color: #e0e0e0;
+  cursor: pointer;
+}
+
+.map {
+  margin-left: 40px;
+  margin-right: 100px;
+  margin-top: 50px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.map img {
+  width: 50%;
+  height: auto;
+  display: block;
+}
