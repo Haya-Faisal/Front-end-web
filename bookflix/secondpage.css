@@ -59,25 +59,33 @@
     text-align: center;
   }
   
-   .hero-image img {
+.hero-image img {
      max-width: 260px;
      height: auto;
      border-radius: 10px;
      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
    }
-   .hero-image a {
+.hero-image a {
     text-decoration: none;
     color: inherit;
   }
    
+.rightside {
+  position: absolute;
+  top: 20%;
+  right: 5%;
+  width: 65%;
+  z-index: 99;
+}
    /* Book title styling */
   .book.title {
-    position: absolute;
-    top: 20%;
-    left: 42%;
-    transform: translateX(-50%);
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
     z-index: 99;
-    text-align: center;
+    text-align: left;
+    margin-bottom: 20px;
   }
    
    .book.title h2 {
@@ -94,12 +102,13 @@
   }
   
 .author {
-  position: absolute;
-  top: 27%;
-  left: 33.5%;
-  transform: translateX(-50%);
+  position: relative;
+  top: 0;
+  left: 0;
+  transform: none;
   z-index: 99;
-  text-align: center;
+  text-align: left;
+  margin-bottom: 20px;
 }
 .author h3 {
     font-family: 'Inria Serif', serif;
@@ -111,13 +120,14 @@
   }
 
 .description {
-  position: absolute;
-  top: 33%;
-  left: 62%;
-  transform: translateX(-50%);
+  position: relative;
+  top: 0;
+  left: 0;
+  transform: none;
   z-index: 99;
   text-align: left;
-  width: 65%;
+  width: 100%;
+  margin-bottom: 20px;
 }
 .description p {
   font-family: 'inter', sans-serif;
@@ -129,13 +139,13 @@
 }
 
  .reviews{
-     position: absolute;
-     top: 80%;
-     left: 57%;
-     transform: translateX(-50%);
+     position: relative;
+     top: 0;
+     left: 0;
+     transform: none;
      z-index: 99;
      text-align: left;
-     width: 55%; 
+     width: 100%; 
  }
 
 .reviews h2{
@@ -231,10 +241,7 @@
   .search-container .search-bar input { min-width: 0; width: 50%; }
 
   .hero-image,
-  .book.title,
-  .author,
-  .description,
-  .reviews,
+  .rightside,
   .buyfrom {
     position: static;
     top: auto;
@@ -243,6 +250,18 @@
     transform: none;
     width: 100%;
     margin: 0 auto 0 auto;
+  }
+  
+  .book.title,
+  .author,
+  .description,
+  .reviews {
+    position: static;
+    top: auto;
+    right: auto;
+    left: auto;
+    transform: none;
+    width: 100%;
   }
 
   .hero-image { text-align: center; margin-bottom: 32px; }
@@ -280,10 +299,7 @@
   }
 
   .hero-image,
-  .book.title,
-  .author,
-  .description,
-  .reviews,
+  .rightside,
   .buyfrom {
     position: static;
     top: auto;
@@ -292,6 +308,18 @@
     transform: none;
     width: 100%;
     margin: 0 auto 0 auto; /* reset to control spacing below */
+  }
+  
+  .book.title,
+  .author,
+  .description,
+  .reviews {
+    position: static;
+    top: auto;
+    right: auto;
+    left: auto;
+    transform: none;
+    width: 100%;
   }
 
   .hero-image { text-align: center; margin-bottom: 32px; }

@@ -34,6 +34,10 @@ header {
   color: inherit;
 }
 
+.logo a h1 {
+  cursor: pointer;
+}
+
 /* Banner styling */
 .banner {
   position: fixed;

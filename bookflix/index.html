@@ -15,7 +15,7 @@
   <script src="sketch.js"></script>
   <header>
     <div class="logo">
-      <a href="index.html" aria-label="Go to home">
+      <a href="#" id="bookflixLink" aria-label="Go to home">
         <h1>Bookflix</h1>
       </a>
     </div>
@@ -38,5 +38,23 @@
     </div>
   </main>
   <script src="search.js"></script>
+  <script>
+    // Handle Bookflix link click - only works when clicking directly on the text
+    document.addEventListener('DOMContentLoaded', function() {
+      const bookflixLink = document.getElementById('bookflixLink');
+      const bookflixText = bookflixLink.querySelector('h1');
+      
+      // Remove default link behavior
+      bookflixLink.addEventListener('click', function(e) {
+        e.preventDefault();
+      });
+      
+      // Only navigate when clicking on the text itself
+      bookflixText.addEventListener('click', function(e) {
+        e.stopPropagation();
+        window.location.href = 'index.html';
+      });
+    });
+  </script>
 </body>
 </html>
