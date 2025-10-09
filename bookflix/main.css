@@ -1,0 +1,267 @@
+/* Black background for the website */
+body {
+  background-color: black;
+  margin: 0;
+  padding: 0;
+}
+
+/* Optional: Ensure the html element also has black background */
+html {
+  background-color: black;
+}
+
+/* Header and Logo Styling */
+header {
+  position: fixed;
+  top: 0;
+  left: 16;
+  width: 100%;
+  z-index: 1000;
+  padding: 30px;
+}
+
+.logo h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.7rem;
+  color: #b3060e; /* Netflix red color */
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Make the clickable logo look like plain text (no underline) */
+.logo a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Banner styling */
+.banner {
+  position: fixed;
+  top: 44%;
+  left: 47%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 100;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.banner h1 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+  color: white;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Container positioning */
+.container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  background-color: black;
+  transition: top 0.3s ease, transform 0.3s ease;
+}
+
+/* Search bar styling */
+.search-bar {
+  position: relative; /* anchor suggestions */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.search-bar input {
+  border: 2px solid #f5cccc; /* Light pink border */
+  border-radius: 20px;
+  padding: 18px 30px;
+  font-size: 1.3rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  outline: none;
+  min-width: 450px;
+}
+
+.search-bar input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.search-bar input:focus {
+  border-color: #f4cdcd; /* Slightly darker pink on focus */
+}
+
+.search-bar button {
+  background-color: #b3060e; /* Red color matching the logo */
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 18px 30px;
+  font-size: 1.3rem;
+  margin-left: 10px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+  background-color: #d4070f; /* Slightly lighter red on hover */
+}
+
+/* Genre links styling */
+.genre-links {
+  margin-top: 18px;
+  text-align: center;
+}
+
+.genre-link  {
+  color: #f6f0f0; 
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin: 0 4px;
+  padding: 8px 16px;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.genre-link:hover {
+  color: white;
+  background-color: rgba(243, 215, 215, 0.2);
+  transform: translateY(-2px);
+}
+.genre-links a {
+  text-decoration: none;
+  color: #f6f0f0;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin: 0 4px;
+  padding: 8px 16px;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .logo h1 {
+    font-size: 2.3rem;
+  }
+
+  .banner h1 {
+    font-size: 1.9rem;
+  }
+  .search-bar input {
+    min-width: 0;
+    width: 60%;
+    flex: 1 1 auto;
+    padding: 16px 26px;
+    font-size: 1.2rem;
+  }
+
+  .search-bar button {
+    padding: 16px 26px;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Keep input and button in the same row */
+  .logo h1 {
+    font-size: 2rem;
+  }
+
+  .banner h1 {
+    font-size: 1.7rem;
+  }
+  .search-bar { flex-direction: row; align-items: center; gap: 5px; }
+
+  .search-bar input {
+    min-width: 0;
+    width: auto;
+    flex: 1 1 auto;
+    padding: 10px 15px;
+    font-size: 1rem;
+  }
+
+  .search-bar button {
+    margin-left: 0;
+    margin-top: 0;
+    width: auto;
+    padding: 10px 20px;
+    font-size: 1rem;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo h1 {
+    font-size: 1.8rem;
+  }
+
+  .banner h1 {
+    font-size: 1.5rem;
+  }
+
+  .search-bar input {
+    width: auto;
+    padding: 8px 12px;
+    font-size: 0.95rem;
+    border-radius: 16px;
+  }
+
+  .search-bar button {
+    width: auto;
+    padding: 8px 12px;
+    font-size: 0.95rem;
+    border-radius: 16px;
+    white-space: nowrap;
+  }
+}
+
+.suggestions-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 80%;
+  background: black;
+  /* border: 2px solid #e1e1e1; */
+  border-radius: 20px;
+  /* border-top: none; */
+  /* border-radius: 0 0 25px 25px; */
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 1000;
+  display: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  color: white;
+}
+
+.suggestions-dropdown.active {
+  display: block;
+}
+
+.suggestion-item {
+  padding: 12px 20px;
+  cursor: pointer;
+  border-bottom: 1px solid #f5cccc;
+  font-family: 'Inter', sans-serif;
+  transition: background 0.2s ease;
+}
+
+.suggestion-item:hover {
+  background: #f8f8f846;
+}
+
+.suggestion-item:last-child {
+  border-bottom: none;
+}
+
+.suggestion-item strong {
+  color: white;
+}

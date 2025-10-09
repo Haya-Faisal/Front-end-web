@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bookflix</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js"></script>
+  <link rel="stylesheet" href="main.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+  <script src="sketch.js"></script>
+  <header>
+    <div class="logo">
+      <a href="index.html" aria-label="Go to home">
+        <h1>Bookflix</h1>
+      </a>
+    </div>
+  </header>
+  <main>
+    <div class="banner">
+        <h1>Ready to Read?</h1>
+    </div>
+    <div class="container">
+      <div class="search-bar">
+        <input type="text" placeholder="Enter book title" id="searchInput">
+        <button id="searchButton">Search</button>
+        <div class="suggestions-dropdown" id="suggestionsDropdown"></div>
+      </div>
+      <div class="genre-links">
+        <a href="https://www.goodreads.com/genres/action" class="genre-link">Action</a>
+        <a href="https://www.goodreads.com/genres/horror" class="genre-link">Horror</a>
+        <a href="https://www.goodreads.com/genres/mystery" class="genre-link">Mystery</a>
+      </div>
+    </div>
+  </main>
+  <script src="search.js"></script>
+</body>
+</html>

@@ -1,0 +1,450 @@
+ 
+/* Second page specific styles */
+.search-container {
+  position: absolute;
+  top: 8%;
+  left: 45%;
+  transform: translateX(-50%);
+  z-index: 100;
+  background-color: black;
+  width: 100%;
+  max-width: 600px;
+  padding: 0 20px;
+}
+
+.search-container .search-bar {
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-container .search-bar input {
+  min-width: 450px;
+  margin-right: 8px;
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  border-radius: 15px;
+}
+
+.search-container .search-bar button {
+  margin-left: 0;
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  border-radius: 15px;
+}
+
+/* Results section (for future use) */
+.results-section {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 1200px;
+  z-index: 50;
+  display: none;
+}
+
+.results-section.show {
+  display: block;
+}
+/* Hero image styling */
+.hero-image {
+    position: absolute;
+    top: 20%;
+    left: 17%;
+    transform: translateX(-50%);
+    z-index: 99;
+    text-align: center;
+  }
+  
+   .hero-image img {
+     max-width: 260px;
+     height: auto;
+     border-radius: 10px;
+     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+   }
+   .hero-image a {
+    text-decoration: none;
+    color: inherit;
+  }
+   
+   /* Book title styling */
+  .book.title {
+    position: absolute;
+    top: 20%;
+    left: 42%;
+    transform: translateX(-50%);
+    z-index: 99;
+    text-align: center;
+  }
+   
+   .book.title h2 {
+     font-family: 'Inria Serif', serif;
+     font-weight: bold;
+     font-size: 2.5rem;
+     color: rgb(232, 228, 228);
+     margin: 0;
+     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+   }
+   .book.title a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+.author {
+  position: absolute;
+  top: 27%;
+  left: 33.5%;
+  transform: translateX(-50%);
+  z-index: 99;
+  text-align: center;
+}
+.author h3 {
+    font-family: 'Inria Serif', serif;
+    font-weight: regular;
+    font-size: 1.5rem;
+    color: rgb(232, 228, 228);
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  }
+
+.description {
+  position: absolute;
+  top: 33%;
+  left: 62%;
+  transform: translateX(-50%);
+  z-index: 99;
+  text-align: left;
+  width: 65%;
+}
+.description p {
+  font-family: 'inter', sans-serif;
+  font-weight: regular;
+  font-size: 1.1rem;
+  color: rgb(232, 228, 228);
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+ .reviews{
+     position: absolute;
+     top: 80%;
+     left: 57%;
+     transform: translateX(-50%);
+     z-index: 99;
+     text-align: left;
+     width: 55%; 
+ }
+
+.reviews h2{
+     font-family: 'inter', sans-serif;
+     font-weight: bolder;
+     font-size: 1.3rem;
+     color: rgb(232, 228, 228);
+     margin: 5px 0 15px 0;
+     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+ .reviews p{
+     font-family: 'inter', sans-serif;
+     font-weight: regular;
+     font-size: 1.1rem;
+     color: rgb(232, 228, 228);
+     margin: 0 0 15px 0;
+     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
+ }
+ 
+ .reviews h6{
+     font-family: 'inter', sans-serif;
+   font-weight: bold;
+   font-size: 1.1rem;
+   color: rgb(232, 228, 228);
+   margin: 0 0 35px 0;
+   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+ }
+
+/* Buy from section */
+.buyfrom {
+  position: absolute;
+  top: 72%; /* placed below the hero image (which starts at 20%) */
+  left: 15%; /* align horizontally with hero image */
+  transform: translateX(-50%);
+  z-index: 99;
+  text-align: left;
+  width: max-content;
+  max-width: 300px;
+}
+
+.buyfrom h4 {
+  font-family: 'Inter', sans-serif;
+  font-weight: bolder;
+  font-size: 1.2rem;
+  color: rgb(232, 228, 228);
+  margin: 0 0 12px 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.buyfrom ul {
+  list-style: disc inside;
+  margin: 0;
+  padding: 0;
+}
+
+.buyfrom a {
+  font-family: 'Inter', sans-serif;
+  font-weight: regular;
+  font-size: 1rem;
+  color: #ffffff; /* white by default */
+  margin: 0 0 8px 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Hover: turn grey when hovered */
+.buyfrom a:hover {
+  color: #bfbfbf;
+}
+
+.buyfrom a::after{
+  color: #ffffff;
+}
+
+
+@media (max-width: 1200px) {
+  /* Stack and maintain consistent spacing from 1200px down to 901px */
+  .search-container {
+    position: static;
+    top: auto;
+    left: auto;
+    transform: none;
+    max-width: 100%;
+    width: 100%;
+    padding: 10px 24px;
+  }
+
+  .search-container .search-bar {
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .search-container .search-bar input { min-width: 0; width: 50%; }
+
+  .hero-image,
+  .book.title,
+  .author,
+  .description,
+  .reviews,
+  .buyfrom {
+    position: static;
+    top: auto;
+    right: auto;
+    left: auto;
+    transform: none;
+    width: 100%;
+    margin: 0 auto 0 auto;
+  }
+
+  .hero-image { text-align: center; margin-bottom: 32px; }
+  .book.title, .author, .description, .reviews, .buyfrom { margin-top: 32px; margin-left: 30px; }
+  .book.title, .author { text-align: center; }
+  .description, .reviews, .buyfrom { text-align: left; padding: 0 24px; }
+}
+@media (max-width: 900px) {
+  /* Reset absolute positioning and stack content in order:
+     search bar, image, book title, author, description, reviews */
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  .search-container {
+    position: static;
+    top: 15px;
+    left: auto;
+    transform: none;
+    max-width: 100%;
+    width: 50%;
+    margin-left: 30%;
+    padding: 10px 16px;
+  }
+
+  .search-container .search-bar {
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .search-container .search-bar input {
+    min-width: 0;
+    width: 50%;
+  }
+
+  .hero-image,
+  .book.title,
+  .author,
+  .description,
+  .reviews,
+  .buyfrom {
+    position: static;
+    top: auto;
+    right: auto;
+    left: auto;
+    transform: none;
+    width: 100%;
+    margin: 0 auto 0 auto; /* reset to control spacing below */
+  }
+
+  .hero-image { text-align: center; margin-bottom: 32px; }
+  .book.title, .author, .description, .reviews, .buyfrom { margin-top: 32px; }
+  .book.title, .author { text-align: center; }
+  .description, .reviews, .buyfrom { text-align: left; padding: 0 16px; }
+
+  .hero-image{
+    align-self: center;
+  }
+  .book-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .book-info {
+    align-items: center;
+    width: 90%;
+  }
+
+  .book-title h2 {
+    font-size: 2rem;
+  }
+
+  .author h3 {
+    font-size: 1.3rem;
+  }
+
+  .description, .reviews {
+    width: 100%;
+  }
+
+  .description p,
+  .reviews p,
+  .reviews h6 {
+    font-size: 1rem;
+  }
+
+  .reviews h2 {
+    font-size: 1.2rem;
+  }
+
+  .hero-image img {
+    max-width: 220px;
+  }
+
+  /* Keep buttons readable */
+  .search-bar { flex-direction: row; }
+
+  .search-bar input {
+    font-size: 1rem;
+    padding: 10px 15px;
+    min-width: 0;
+    width: auto;
+    flex: 1 1 auto;
+  }
+
+  .search-bar button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    white-space: nowrap;
+  }
+
+  /* Order so buyfrom appears AFTER reviews on small screens */
+  header { order: 1; }
+  main { order: 2; }
+  .book.title { order: 3; }
+  .author { order: 4; }
+  .description { order: 5; }
+  .reviews { order: 6; }
+  .buyfrom { order: 7; }
+}
+
+/* --- Responsive: Mobile (<= 480px) --- */
+@media (max-width: 480px) {
+  body {
+    padding: 15px;
+  }
+
+  .search-container {
+    padding: 0 10px;
+  }
+
+  .search-bar {
+    flex-direction: row;
+    gap: 8px;
+  }
+
+  .search-bar input {
+    font-size: 0.95rem;
+    padding: 8px 12px;
+  }
+
+  .search-bar button {
+    padding: 8px 12px;
+    font-size: 0.95rem;
+    white-space: nowrap;
+    width: auto;
+  }
+
+  .book-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .book-info {
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  .book-title h2 {
+    font-size: 1.8rem;
+  }
+
+  .author h3 {
+    font-size: 1.2rem;
+  }
+
+  .description p,
+  .reviews p,
+  .reviews h6 {
+    font-size: 0.95rem;
+  }
+
+  .reviews h2 {
+    font-size: 1.1rem;
+  }
+
+  .hero-image img {
+    max-width: 180px;
+  }
+}
+
+/* --- Very Small Devices (<= 360px) --- */
+@media (max-width: 360px) {
+  .book-title h2 {
+    font-size: 1.6rem;
+  }
+
+  .author h3 {
+    font-size: 1.1rem;
+  }
+
+  .hero-image img {
+    max-width: 150px;
+  }
+
+  .description p,
+  .reviews p,
+  .reviews h6 {
+    font-size: 0.9rem;
+  }
+}
