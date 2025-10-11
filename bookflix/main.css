@@ -3,6 +3,7 @@ body {
   background-color: black;
   margin: 0;
   padding: 0;
+  width: 100%;
 }
 
 /* Optional: Ensure the html element also has black background */

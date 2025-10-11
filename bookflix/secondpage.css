@@ -1,4 +1,19 @@
- 
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+.buyfrom,
+.buyfrom * {
+  text-align: left !important;
+  justify-content: flex-start !important;
+  align-items: flex-start !important;
+}
+
 /* Second page specific styles */
 .search-container {
   position: absolute;
@@ -221,6 +236,10 @@
 
 
 @media (max-width: 1200px) {
+  .rightside {
+    padding: 0 24px;
+    box-sizing: border-box;
+  }
   /* Stack and maintain consistent spacing from 1200px down to 901px */
   .search-container {
     position: static;
@@ -276,6 +295,7 @@
     display: flex;
     flex-direction: column;
   }
+  
   .search-container {
     position: static;
     top: 15px;
@@ -299,7 +319,6 @@
   }
 
   .hero-image,
-  .rightside,
   .buyfrom {
     position: static;
     top: auto;
@@ -308,6 +327,10 @@
     transform: none;
     width: 100%;
     margin: 0 auto 0 auto; /* reset to control spacing below */
+  }
+  .rightside {
+    padding: 0 16px;
+    box-sizing: border-box;
   }
   
   .book.title,
@@ -323,7 +346,7 @@
   }
 
   .hero-image { text-align: center; margin-bottom: 32px; }
-  .book.title, .author, .description, .reviews, .buyfrom { margin-top: 32px; }
+  .book.title, .author, .description, .reviews, .buyfrom { margin-top: 32px; margin-left: 30px;}
   .book.title, .author { text-align: center; }
   .description, .reviews, .buyfrom { text-align: left; padding: 0 16px; }
 
@@ -386,8 +409,8 @@
   }
 
   /* Order so buyfrom appears AFTER reviews on small screens */
-  header { order: 1; }
-  main { order: 2; }
+  .header { order: 1; }
+  .main { order: 2; }
   .book.title { order: 3; }
   .author { order: 4; }
   .description { order: 5; }
@@ -395,64 +418,156 @@
   .buyfrom { order: 7; }
 }
 
-/* --- Responsive: Mobile (<= 480px) --- */
 @media (max-width: 480px) {
   body {
     padding: 15px;
+    display: flex;
+    flex-direction: column;
   }
 
+  /* Search container - Order 1 */
   .search-container {
-    padding: 0 10px;
+    order: 1;
+    position: static;
+    transform: none;
+    width: 100%;
+    max-width: 100%;
+    padding: 10px 0;
+    margin: 0 0 20px 0;
   }
 
-  .search-bar {
+  .search-container .search-bar {
     flex-direction: row;
     gap: 8px;
+    justify-content: center;
   }
 
-  .search-bar input {
+  .search-container .search-bar input {
     font-size: 0.95rem;
     padding: 8px 12px;
+    min-width: 0;
+    width: 60%;
   }
 
-  .search-bar button {
+  .search-container .search-bar button {
     padding: 8px 12px;
     font-size: 0.95rem;
     white-space: nowrap;
-    width: auto;
   }
 
-  .book-content {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .book-info {
-    align-items: center;
+  /* Hero image - Order 2 */
+  .hero-image {
+    order: 2;
+    position: static;
+    transform: none;
     text-align: center;
+    margin: 0 0 20px 0;
     width: 100%;
-  }
-
-  .book-title h2 {
-    font-size: 1.8rem;
-  }
-
-  .author h3 {
-    font-size: 1.2rem;
-  }
-
-  .description p,
-  .reviews p,
-  .reviews h6 {
-    font-size: 0.95rem;
-  }
-
-  .reviews h2 {
-    font-size: 1.1rem;
   }
 
   .hero-image img {
     max-width: 180px;
+  }
+
+  /* Rightside container - Order 3, 4, 5, 6 */
+  .rightside {
+    order: 3;
+    position: absolute;
+    width: 100%;
+    padding: 0 10px;
+    margin: 0;
+  }
+
+  /* Book title - Order 3 */
+  .book.title {
+    order: 3;
+    position: static;
+    text-align: center;
+    margin: 0 0 15px 0;
+  }
+
+  .rightside .book.title h2 {
+    font-size: 1.8rem;
+  }
+
+  /* Author - Order 4 */
+  .author {
+    order: 4;
+    position: static;
+    text-align: center;
+    margin: 0 0 15px 0;
+  }
+
+  .rightside .author h3 {
+    font-size: 1.2rem;
+  }
+
+  /* Description - Order 5 */
+  .description {
+    order: 5;
+    position: static;
+    text-align: left;
+    margin: 0 0 20px 0;
+    width: 100%;
+  }
+
+  .rightside .description p {
+    font-size: 0.95rem;
+  }
+
+  /* Reviews - Order 6 */
+  .reviews {
+    order: 6;
+    position: static;
+    text-align: left;
+    margin: 0 0 20px 0;
+    width: 100%;
+  }
+
+  .rightside .reviews h2 {
+    font-size: 1.1rem;
+  }
+
+  .rightside .reviews p,
+  .rightside .reviews h6 {
+    font-size: 0.95rem;
+  }
+
+  /* Buy from section - Order 7 */
+  .buyfrom {
+    order: 7;
+    position: static;
+    transform: none;
+    width: 100%;
+    max-width: 100%;
+    text-align: left;
+    margin: 0 0 20px 0;
+    padding: 0 10px;
+    align-items: flex-start;
+  }
+
+  .buyfrom h4 {
+    font-size: 1.1rem;
+  }
+
+  .buyfrom a {
+    font-size: 0.95rem;
+  }
+
+  /* Hide any absolute positioning for all elements */
+  .search-container,
+  .hero-image,
+  .rightside,
+  .book.title,
+  .author,
+  .description,
+  .reviews,
+  .buyfrom {
+    position: static !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    transform: none !important;
   }
 }
 
