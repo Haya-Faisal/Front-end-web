@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Virtual Plant </title>
+        <link rel="stylesheet" href="style.css"/>
+        <script src="main.js" defer></script>
+    </head>
+    <body>
+        <h1>Grow Your Virtual Plant!</h1>
+        <p>Click the water button to help your plant grow!</p>
+    
+        <div class="plant-container">
+            <div class="stem" id="stem" style="height: 0px;"></div>
+            <!-- <div class="leaf leaf1"></div>
+            <div class="leaf leaf2"></div> -->
+            <div class="flower" id="flower"></div>
+            <div class="pot"></div>
+        </div>
+
+        <button id="waterBtn"> Water Plant</button>
+        <button id="resetBtn"> Start Over</button>
+    
+        <div class="water-count">Water given: <span id="count">0</span> times</div>
+        <div class="message" id="message">Your plant needs water to grow!</div>
+
+
+    </body>
+</html>
